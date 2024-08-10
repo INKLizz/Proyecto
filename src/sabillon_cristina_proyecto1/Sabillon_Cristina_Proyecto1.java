@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Laura Sabillon
  */
-public class PROYECT {
+public class Sabillon_Cristina_Proyecto1 {
     /**
      * @param args the command line arguments
      */
