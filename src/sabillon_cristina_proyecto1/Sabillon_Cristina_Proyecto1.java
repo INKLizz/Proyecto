@@ -40,9 +40,9 @@ public class Sabillon_Cristina_Proyecto1 {
         double deposito_posible = 0;
         
         //FACTURA
-        String producto = "", Factura = "";
+        String producto = "";
         int precio = 0;
-        double subtotal = 0, total = 0, impuesto = 0, descuento = 0, subtotal_final = 0, descuento_final = 0;     
+        double subtotal = 0, total = 0;   
         
         //REPORTES
         int contador_ventas = 0, contador_compras = 0, mayor_cantidad = 0, cantidad2 = 0, cantidad3 = 0, cantidad4 = 0;
@@ -155,10 +155,11 @@ public class Sabillon_Cristina_Proyecto1 {
                 continue;
             }
             //FACTURA
-            String producto1 = "", producto2 = "", producto3 = "", producto4= "";
+            String producto1 = "", producto2 = "", producto3 = "", producto4= "", Factura = "";
             int cantidad_1 = 0, cantidad_2 = 0 , cantidad_3 = 0, cantidad_4 = 0,
                 precio_1 = 0, precio_2 = 0, precio_3 = 0, precio_4 = 0;
-            double subtotal_1 = 0, subtotal_2 = 0, subtotal_3 = 0, subtotal_4 = 0;                          
+            double subtotal_1 = 0, subtotal_2 = 0, subtotal_3 = 0, subtotal_4 = 0, subtotal_final = 0, impuesto = 0, descuento = 0,
+                    descuento_final = 0;
             
             System.out.println("\n|---------------------------------------------------------");
             System.out.println("|  Tipo de Cliente  |  Productos disponibles a Cliente  |");
@@ -438,7 +439,7 @@ public class Sabillon_Cristina_Proyecto1 {
                     impuesto = subtotal_final * 0.07;
                     total = subtotal_final + impuesto - descuento_final;      
 
-                    //AÑADIR
+                    //AÑADIR A CANTIDAD Y CAMBIAR SUBTOTAL
                     if (codigo.equals("1") && producto.equals("Azucar")) {
                         cantidad_1 += cantidad;
                         subtotal_1 = precio * cantidad_1;
@@ -674,12 +675,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         producto_4 += (producto_4.equals("") ? "" : ", ") + "Trigo";
                     }
 
-                    //RESETEAR VARIABLES
-                    Factura = "";                    
-                    subtotal_final = 0;
-                    impuesto = 0;
-                    descuento = 0;
-                    descuento_final = 0;
+                    //RESETEAR VARIABLE
                     total = 0;
 
                     if (!producto_disponible || buy.equalsIgnoreCase("no")) {
@@ -1004,7 +1000,7 @@ public class Sabillon_Cristina_Proyecto1 {
         // ** SALIR DEL SISTEMA **
         if (ventana.equalsIgnoreCase("f")){
             System.out.println("\nSaliendo del Sistema.....");
-            break;
+            System.exit(0);
             }
         }    
     }
