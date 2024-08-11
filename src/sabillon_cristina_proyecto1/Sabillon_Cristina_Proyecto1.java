@@ -863,8 +863,8 @@ public class Sabillon_Cristina_Proyecto1 {
                     //NO SE PUEDE PAGAR COMPRA
                     if (total > caja){
                         System.out.println("No se puede realizar compra.");
-                        System.out.println("Solo tiene en caja Lps. " + caja);
-                        System.out.println("Se requiere Lps. " + total);
+                        System.out.println("Solo tiene en caja Lps. " + String.format("%.2f", caja));
+                        System.out.println("Se requiere Lps. " + String.format("%.2f", total));
                         continue;
                     }                    
                     
@@ -892,7 +892,7 @@ public class Sabillon_Cristina_Proyecto1 {
                     System.out.println("Producto: " + producto);
                     System.out.println("Cantidad por Kg: " + cantidad + " kg.");
                     System.out.println("Precio por 1 Kg. : Lps." + precio);
-                    System.out.println("Total : Lps." + total);
+                    System.out.println("Total : Lps." + String.format("%.2f", total));
                     
                     //REPORTES
                     total_compras += total;
