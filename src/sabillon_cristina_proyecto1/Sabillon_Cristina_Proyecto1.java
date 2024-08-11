@@ -932,15 +932,23 @@ public class Sabillon_Cristina_Proyecto1 {
             if (si_no.equalsIgnoreCase("si")){ 
                 caja_abierta = false;
                 
-                //CONTADORES RESETEO
-                contador_ventas = 0;
-                contador_compras = 0;
-                total_ventas = 0;
+                //CONTADORES Y ACUMULADORES REPORTE ERSETEO
+                contador_ventas = 0;  
+                contador_compras = 0; 
+                total_ventas = 0; 
                 total_compras = 0;
                 valor_compra = 0;
                 valor_ventas = 0;
                 mayorVenta = 0;
                 mayorCompra = 0;
+                producto_estrella = "";
+                mayor_cantidad = 0;
+                producto_2 = "";
+                producto_3 = "";
+                producto_4 = "";
+                cantidad2 = 0;
+                cantidad3 = 0;
+                cantidad4 = 0;
                 
                 //DEPOSITO
                 System.out.println("\nCuanto dinero desea depositar en el banco? Tiene en caja: Lps. " + String.format("%.2f", caja) 
@@ -982,6 +990,6 @@ public class Sabillon_Cristina_Proyecto1 {
             System.out.println("\nSaliendo del Sistema.....");
             System.exit(0);
             }
-        }    
+        }
     }
 }
