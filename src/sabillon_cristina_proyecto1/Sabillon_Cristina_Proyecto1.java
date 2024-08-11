@@ -161,6 +161,7 @@ public class Sabillon_Cristina_Proyecto1 {
             double subtotal_1 = 0, subtotal_2 = 0, subtotal_3 = 0, subtotal_4 = 0, subtotal_final = 0, impuesto = 0, descuento = 0,
                     descuento_final = 0;
             
+            //MENU CLIENTE
             System.out.println("\n|---------------------------------------------------------");
             System.out.println("|  Tipo de Cliente  |  Productos disponibles a Cliente  |");
             System.out.println("|---------------------------------------------------------");
