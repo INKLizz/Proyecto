@@ -153,6 +153,7 @@ public class Sabillon_Cristina_Proyecto1 {
                 System.out.println("No tiene productos para poder vender al cliente.");
                 continue;
             }
+            
             //FACTURA
             String producto1 = "", producto2 = "", producto3 = "", producto4= "", Factura = "";
             int cantidad_1 = 0, cantidad_2 = 0 , cantidad_3 = 0, cantidad_4 = 0,
@@ -174,7 +175,7 @@ public class Sabillon_Cristina_Proyecto1 {
             //RESTRICCIÓN
             while (!(cliente.equalsIgnoreCase("a") ||cliente.equalsIgnoreCase("b") 
                     || cliente.equalsIgnoreCase("c") || cliente.equalsIgnoreCase("e"))){ 
-                System.out.println("ERROR. Debe ingresar (A, B, C). Intente de nuevo");
+                System.out.println("ERROR. Debe ingresar una de estas letras (A, B, C). Intente de nuevo");
                 cliente = scan.next();
             }
             
@@ -194,7 +195,7 @@ public class Sabillon_Cristina_Proyecto1 {
             }
             
             //CLIENTES TIPOS Y PRODUCTOS DISPONIBLES            
-            while (true){               
+            while (true){
                 
                 // --- CLIENTE A ---
                 if (cliente.equalsIgnoreCase("a")){    
@@ -240,7 +241,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         || codigo.equals("4")) {
                             break;
                             } else {
-                            System.out.println("ERROR. Este codigo no existe,solo son validos codigo (1,2,3,4) intente de nuevo.");
+                            System.out.println("ERROR. Este codigo no existe ,solo son validos codigo (1,2,3,4) intente de nuevo.");
                             }
                             codigo = scan.next();
                         }
@@ -255,7 +256,7 @@ public class Sabillon_Cristina_Proyecto1 {
                             break;
                             }
                             } else {
-                            System.out.println("ERROR. Este codigo no existe,solo son validos codigo (1,2,3,4) intente de nuevo.");
+                            System.out.println("ERROR. Este codigo no existe, solo son validos codigo (1,2,3) intente de nuevo.");
                             }
                             codigo = scan.next();
                         }
@@ -270,7 +271,7 @@ public class Sabillon_Cristina_Proyecto1 {
                                 break;
                             }
                             } else {
-                            System.out.println("ERROR. Este codigo no existe,solo son validos codigo (1,2,3,4) intente de nuevo.");
+                            System.out.println("ERROR. Este codigo no existe, solo es valido codigo (4) intente de nuevo.");
                             }
                             codigo = scan.next();                                                  
                         }
@@ -320,7 +321,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         }
                     }
           
-                    //1 AZUCAR 
+                    //AZUCAR 
                     if (codigo.equals("1") && cantidad > azucar){
                         System.out.println("Solo hay disponible Kg. " + azucar + " de azucar, quiere continuar con su compra? SI/NO");
                         continuar = scan.next();
@@ -344,7 +345,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         cantidad_azucar += cantidad;
                     }
                     
-                    //2 AVENA
+                    //AVENA
                     else if(codigo.equals("2") && cantidad > avena){
                         System.out.println("Solo hay disponible Kg. " + avena + " de acvena, quiere continuar con su compra? SI/NO");
                         continuar = scan.next();
@@ -368,7 +369,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         cantidad_avena += cantidad;                        
                     }    
                     
-                    //3 TRIGO
+                    //TRIGO
                     else if (codigo.equals("3") && cantidad > trigo){
                         System.out.println("Solo hay disponible Kg. " + trigo + " de trigo, quiere continuar con su compra? SI/NO");
                         continuar = scan.next();
@@ -392,7 +393,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         cantidad_trigo += cantidad;                        
                     }
                      
-                    //4 MAIZ
+                    //MAIZ
                     else if (codigo.equals("4") && cantidad > maiz){
                         System.out.println("Solo hay disponible Kg. " + maiz + " de maiz, quiere continuar con su compra? SI/NO");
                         continuar = scan.next();
@@ -416,7 +417,7 @@ public class Sabillon_Cristina_Proyecto1 {
                             cantidad_maiz += cantidad;
                     }
                               
-                    //SUBTOTAL Y DESCUENTO 
+                    //SUBTOTAL
                     subtotal = precio * cantidad;
                     subtotal_final += subtotal;
                     
