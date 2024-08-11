@@ -35,9 +35,8 @@ public class Sabillon_Cristina_Proyecto1 {
         
         //CAJA
         String si_no = "";
-        boolean caja_abierta = false, open_first = true, valid = false;
-        int deposito = 0; 
-        double deposito_posible = 0;
+        boolean caja_abierta = false, open_first = true, valid = false; 
+        double deposito_posible = 0, deposito = 0;
         
         //FACTURA
         String producto = "";
@@ -306,30 +305,20 @@ public class Sabillon_Cristina_Proyecto1 {
                     //CANTIDAD A VENDER
                     System.out.println("Cuantos kgs va a comprar?");
                     valid = false;
-                    
-                    while (!valid){
-                        try{
+
+                    while (!valid) {
+                        try {
                             cantidad = scan.nextInt();
-                            valid = true;
-                        }catch (InputMismatchException e){
-                            System.out.println("Debe que ingresar un numero. Intente de nuevo.");
+                            if (cantidad < 0) {
+                                System.out.println("No se permiten numeros negativos. Intente de nuevo.");
+                            } else {
+                                valid = true;
+                            }
+                        } catch (InputMismatchException e) {
+                            System.out.println("Debe ingresar un numero. Intente de nuevo.");
                             scan.next();
                         }
                     }
-                    
-                    while ( cantidad < 0){
-                        System.out.println("No se permiten numeros negativos.");
-                        valid = false;                   
-                        while (!valid){
-                            try{
-                            cantidad = scan.nextInt();
-                            valid = true;
-                             }catch (InputMismatchException e){
-                                System.out.println("Debe que ingresar un numero. Intente de nuevo.");
-                                scan.next();
-                                }
-                            }                   
-                        } 
           
                     //1 AZUCAR 
                     if (codigo.equals("1") && cantidad > azucar){
@@ -525,6 +514,8 @@ public class Sabillon_Cristina_Proyecto1 {
                     System.out.println("Impuesto 7% : Lps. " + String.format("%.2f",impuesto));
                     System.out.println("Descuento " + descuento * 100 + " % : Lps. " + String.format("%.2f",descuento_final));
                     System.out.println("Total Final: " + String.format("%.2f",total)); 
+                    }else{
+                        System.out.println("No se realizo ninguna venta.");
                     }
                     
                     //REPORTES
@@ -535,10 +526,8 @@ public class Sabillon_Cristina_Proyecto1 {
                     valor_ventas = total_ventas / contador_ventas;
 
                     //MAYOR VENTA
-                    if (mayorVenta < total) {
+                    if (total > mayorVenta) {
                         mayorVenta = total;
-                    }else{
-                        mayorVenta = mayorVenta;
                     }
 
                     //PRODUCTO ESTRELLA
@@ -559,7 +548,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         mayor_cantidad = cantidad_trigo;
                     }
 
-                    // EMPATE
+                    //EMPATE
                     if (cantidad_maiz == mayor_cantidad && !producto_estrella.contains("Maiz")) {
                         producto_estrella += (producto_estrella.equals("") ? "" : ", ") + "Maiz";
                     }
@@ -573,7 +562,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         producto_estrella += (producto_estrella.equals("") ? "" : ", ") + "Trigo";
                     }
 
-                    // SEGUNDO LUGAR
+                    //SEGUNDO LUGAR
                     producto_2 = "";
                     cantidad2 = 0;
                     if (!producto_estrella.contains("Maiz") && cantidad_maiz > cantidad2) {
@@ -593,7 +582,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         cantidad2 = cantidad_trigo;
                     }
 
-                    // EMPATE
+                    //EMPATE
                     if (!producto_estrella.contains("Maiz") && cantidad_maiz == cantidad2 && !producto_2.contains("Maiz")) {
                         producto_2 += (producto_2.equals("") ? "" : ", ") + "Maiz";
                     }
@@ -607,7 +596,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         producto_2 += (producto_2.equals("") ? "" : ", ") + "Trigo";
                     }
 
-                    // TERCER LUGAR
+                    //TERCER LUGAR
                     producto_3 = "";
                     cantidad3 = 0; 
                     if (!producto_estrella.contains("Maiz") && !producto_2.contains("Maiz") && cantidad_maiz > cantidad3) {
@@ -627,7 +616,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         cantidad3 = cantidad_trigo;
                     }
 
-                    // EMPATE
+                    //EMPATE
                     if (!producto_estrella.contains("Maiz") && !producto_2.contains("Maiz") && cantidad_maiz == cantidad3 && !producto_3.contains("Maiz")) {
                         producto_3 += (producto_3.equals("") ? "" : ", ") + "Maiz";
                     }
@@ -641,7 +630,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         producto_3 += (producto_3.equals("") ? "" : ", ") + "Trigo";
                     }
 
-                    // CUARTO LUGAR
+                    //CUARTO LUGAR
                     producto_4 = ""; 
                     cantidad4 = 0;
                     if (!producto_estrella.contains("Maiz") && !producto_2.contains("Maiz") && !producto_3.contains("Maiz") && cantidad_maiz > cantidad4) {
@@ -661,7 +650,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         cantidad4 = cantidad_trigo;
                     }
 
-                    // EMPATE
+                    //EMPATE
                     if (!producto_estrella.contains("Maiz") && !producto_2.contains("Maiz") && !producto_3.contains("Maiz") && cantidad_maiz == cantidad4 && !producto_4.contains("Maiz")) {
                         producto_4 += (producto_4.equals("") ? "" : ", ") + "Maiz";
                     }
@@ -816,29 +805,19 @@ public class Sabillon_Cristina_Proyecto1 {
                     System.out.println("Cuantos kgs va a comprar?");
                     valid = false;
                     
-                    while (!valid){
-                        try{
+                    while (!valid) {
+                        try {
                             cantidad = scan.nextInt();
-                            valid = true;
-                        }catch (InputMismatchException e){
-                            System.out.println("Debe de Ingresar un numero. Intente de nuevo");
+                            if (cantidad < 0) {
+                                System.out.println("No se permiten numeros negativos. Intente de nuevo.");
+                            } else {
+                                valid = true;
+                            }
+                        } catch (InputMismatchException e) {
+                            System.out.println("Debe ingresar un numero. Intente de nuevo.");
                             scan.next();
                         }
-                    }
-
-                    while ( cantidad < 0){
-                        System.out.println("No se permiten numeros negativos.");
-                        valid = false;
-                        while (!valid){                   
-                            try{
-                            cantidad = scan.nextInt();
-                                valid = true;
-                            }catch (InputMismatchException e){
-                                System.out.println("Debe de Ingresar un numero. Intente de nuevo");
-                                scan.next();
-                            }
-                        }
-                    }             
+                    }  
                     
                     //NO SE IMPRIME FACTURA
                     if (cantidad == 0){
@@ -889,11 +868,9 @@ public class Sabillon_Cristina_Proyecto1 {
                     valor_compra = total_compras/contador_compras;
                     
                     //COMPRA MAYOR
-                    if (mayorCompra > total){
-                        mayorCompra = mayorCompra;
-                    }else{
+                    if (total > mayorCompra){
                         mayorCompra = total;
-                    }                    
+                    }                  
                 }
         
         // ** VENTANA DE REPORTES **
@@ -965,32 +942,34 @@ public class Sabillon_Cristina_Proyecto1 {
                 mayorCompra = 0;
                 
                 //DEPOSITO
-                System.out.println("\nCuanto dinero desea depositar al banco?, Tiene en caja: Lps. " + String.format("%.2f", caja) 
-                        + "\nTenga en cuenta la cantidad maxima que puede depositar es el 60% en efectivo en caja.");
+                System.out.println("\nCuanto dinero desea depositar en el banco? Tiene en caja: Lps. " + String.format("%.2f", caja) 
+                        + "\nTenga en cuenta que la cantidad maxima que puede depositar es el 60% en efectivo en caja.");
+
+                deposito_posible = caja * 0.6;
                 valid = false;
-                
-                while (!valid){
-                    try{
-                        deposito = scan.nextInt();
-                        valid = true;
-                    }catch(InputMismatchException e){
-                        System.out.println("Debe de ingresar un numero. Intente de nuevo.");
-                        scan.next();
+                while (!valid) {
+                    try {
+                        deposito = scan.nextDouble();
+                        if (deposito < 0) {
+                            System.out.println("No se permite el ingreso de numeros negativos. Intente de nuevo.");
+                        } else if (deposito > deposito_posible) {
+                            System.out.println("Solo puede depositar una cantidad menor o igual al 60% de efectivo en caja. Intente de nuevo.");
+                        } else {
+                            valid = true;
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Debe ingresar un numero. Intente de nuevo.");
+                        scan.next(); 
                     }
                 }
-                
-                while (deposito < 0){
-                    System.out.println("No se permite el ingreso de numeros negativos. Intente de nuevo.");
-                    deposito = scan.nextInt();
-                }
-                
-                deposito_posible = caja * 0.6;
-                while (deposito > deposito_posible){
-                    System.out.println("Solo puede depositar el menos o igual que el 60% de efectivo de caja. Intente de nuevo.");
-                    deposito = scan.nextInt();
-                }
                 caja -= deposito;
-                
+                if (deposito > 0){
+                    System.out.println("Deposito realizado. Nuevo saldo en caja: Lps. " + String.format("%.2f", caja));
+                    System.out.println("...Cerrando caja.");
+                }else{
+                    System.out.println("No se realizo ningun deposito.");
+                    System.out.println("...Cerrando caja.");
+                }
             }
             else if (si_no.equalsIgnoreCase("no")){
                 continue;
