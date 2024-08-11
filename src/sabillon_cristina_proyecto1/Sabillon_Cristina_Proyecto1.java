@@ -24,7 +24,7 @@ public class Sabillon_Cristina_Proyecto1 {
         //VENTA
         int  azucar_venta = 30, avena_venta = 25, trigo_venta = 32, maiz_venta = 20, cantidad = 0;
         String codigo = "", buy = "", continuar = "";
-        boolean venta_active = false, producto_disponible = true;
+        boolean producto_disponible = true;
         
         //COMPRA
         int azucar_compra = 25, avena_compra_C = 22, avena_compra_B = 20, trigo_compra = 30, maiz_compra = 18;
@@ -558,18 +558,18 @@ public class Sabillon_Cristina_Proyecto1 {
                         mayor_cantidad = cantidad_trigo;
                     }
 
-                    //EMPATE
+                    // EMPATE
                     if (cantidad_maiz == mayor_cantidad && !producto_estrella.contains("Maiz")) {
-                        producto_estrella += (producto_estrella.isEmpty() ? "" : ", ") + "Maiz";
+                        producto_estrella += (producto_estrella.equals("") ? "" : ", ") + "Maiz";
                     }
                     if (cantidad_avena == mayor_cantidad && !producto_estrella.contains("Avena")) {
-                        producto_estrella += (producto_estrella.isEmpty() ? "" : ", ") + "Avena";
+                        producto_estrella += (producto_estrella.equals("") ? "" : ", ") + "Avena";
                     }
                     if (cantidad_azucar == mayor_cantidad && !producto_estrella.contains("Azucar")) {
-                        producto_estrella += (producto_estrella.isEmpty() ? "" : ", ") + "Azucar";
+                        producto_estrella += (producto_estrella.equals("") ? "" : ", ") + "Azucar";
                     }
                     if (cantidad_trigo == mayor_cantidad && !producto_estrella.contains("Trigo")) {
-                        producto_estrella += (producto_estrella.isEmpty() ? "" : ", ") + "Trigo";
+                        producto_estrella += (producto_estrella.equals("") ? "" : ", ") + "Trigo";
                     }
 
                     // SEGUNDO LUGAR
@@ -592,21 +592,21 @@ public class Sabillon_Cristina_Proyecto1 {
                         cantidad2 = cantidad_trigo;
                     }
 
-                    //EMPATE
+                    // EMPATE
                     if (!producto_estrella.contains("Maiz") && cantidad_maiz == cantidad2 && !producto_2.contains("Maiz")) {
-                        producto_2 += (producto_2.isEmpty() ? "" : ", ") + "Maiz";
+                        producto_2 += (producto_2.equals("") ? "" : ", ") + "Maiz";
                     }
                     if (!producto_estrella.contains("Avena") && cantidad_avena == cantidad2 && !producto_2.contains("Avena")) {
-                        producto_2 += (producto_2.isEmpty() ? "" : ", ") + "Avena";
+                        producto_2 += (producto_2.equals("") ? "" : ", ") + "Avena";
                     }
                     if (!producto_estrella.contains("Azucar") && cantidad_azucar == cantidad2 && !producto_2.contains("Azucar")) {
-                        producto_2 += (producto_2.isEmpty() ? "" : ", ") + "Azucar";
+                        producto_2 += (producto_2.equals("") ? "" : ", ") + "Azucar";
                     }
                     if (!producto_estrella.contains("Trigo") && cantidad_trigo == cantidad2 && !producto_2.contains("Trigo")) {
-                        producto_2 += (producto_2.isEmpty() ? "" : ", ") + "Trigo";
+                        producto_2 += (producto_2.equals("") ? "" : ", ") + "Trigo";
                     }
 
-                    //TERCER LUGAR
+                    // TERCER LUGAR
                     producto_3 = "";
                     cantidad3 = 0; 
                     if (!producto_estrella.contains("Maiz") && !producto_2.contains("Maiz") && cantidad_maiz > cantidad3) {
@@ -626,21 +626,21 @@ public class Sabillon_Cristina_Proyecto1 {
                         cantidad3 = cantidad_trigo;
                     }
 
-                    //EMPATE
+                    // EMPATE
                     if (!producto_estrella.contains("Maiz") && !producto_2.contains("Maiz") && cantidad_maiz == cantidad3 && !producto_3.contains("Maiz")) {
-                        producto_3 += (producto_3.isEmpty() ? "" : ", ") + "Maiz";
+                        producto_3 += (producto_3.equals("") ? "" : ", ") + "Maiz";
                     }
                     if (!producto_estrella.contains("Avena") && !producto_2.contains("Avena") && cantidad_avena == cantidad3 && !producto_3.contains("Avena")) {
-                        producto_3 += (producto_3.isEmpty() ? "" : ", ") + "Avena";
+                        producto_3 += (producto_3.equals("") ? "" : ", ") + "Avena";
                     }
                     if (!producto_estrella.contains("Azucar") && !producto_2.contains("Azucar") && cantidad_azucar == cantidad3 && !producto_3.contains("Azucar")) {
-                        producto_3 += (producto_3.isEmpty() ? "" : ", ") + "Azucar";
+                        producto_3 += (producto_3.equals("") ? "" : ", ") + "Azucar";
                     }
                     if (!producto_estrella.contains("Trigo") && !producto_2.contains("Trigo") && cantidad_trigo == cantidad3 && !producto_3.contains("Trigo")) {
-                        producto_3 += (producto_3.isEmpty() ? "" : ", ") + "Trigo";
+                        producto_3 += (producto_3.equals("") ? "" : ", ") + "Trigo";
                     }
 
-                    //CUARTO LUGAR
+                    // CUARTO LUGAR
                     producto_4 = ""; 
                     cantidad4 = 0;
                     if (!producto_estrella.contains("Maiz") && !producto_2.contains("Maiz") && !producto_3.contains("Maiz") && cantidad_maiz > cantidad4) {
@@ -660,19 +660,20 @@ public class Sabillon_Cristina_Proyecto1 {
                         cantidad4 = cantidad_trigo;
                     }
 
-                    //EMPATE
+                    // EMPATE
                     if (!producto_estrella.contains("Maiz") && !producto_2.contains("Maiz") && !producto_3.contains("Maiz") && cantidad_maiz == cantidad4 && !producto_4.contains("Maiz")) {
-                        producto_4 += (producto_4.isEmpty() ? "" : ", ") + "Maiz";
+                        producto_4 += (producto_4.equals("") ? "" : ", ") + "Maiz";
                     }
                     if (!producto_estrella.contains("Avena") && !producto_2.contains("Avena") && !producto_3.contains("Avena") && cantidad_avena == cantidad4 && !producto_4.contains("Avena")) {
-                        producto_4 += (producto_4.isEmpty() ? "" : ", ") + "Avena";
+                        producto_4 += (producto_4.equals("") ? "" : ", ") + "Avena";
                     }
                     if (!producto_estrella.contains("Azucar") && !producto_2.contains("Azucar") && !producto_3.contains("Azucar") && cantidad_azucar == cantidad4 && !producto_4.contains("Azucar")) {
-                        producto_4 += (producto_4.isEmpty() ? "" : ", ") + "Azucar";
+                        producto_4 += (producto_4.equals("") ? "" : ", ") + "Azucar";
                     }
                     if (!producto_estrella.contains("Trigo") && !producto_2.contains("Trigo") && !producto_3.contains("Trigo") && cantidad_trigo == cantidad4 && !producto_4.contains("Trigo")) {
-                        producto_4 += (producto_4.isEmpty() ? "" : ", ") + "Trigo";
+                        producto_4 += (producto_4.equals("") ? "" : ", ") + "Trigo";
                     }
+
                     
                     //RESETEAR VARIABLES
                     Factura = "";                    
