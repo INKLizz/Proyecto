@@ -961,10 +961,16 @@ public class Sabillon_Cristina_Proyecto1 {
                 //CONTADORES RESETEO
                 contador_ventas = 0;
                 contador_compras = 0;
+                total_ventas = 0;
+                total_compras = 0;
+                valor_compra = 0;
+                valor_ventas = 0;
+                mayorVenta = 0;
+                mayorCompra = 0;
                 
                 //DEPOSITO
-                System.out.println("\nCuanto dinero desea depositar al banco? "
-                        + "\nTenga en cuenta la cantidad maxima que puede depositar el el 60% en efectivo en caja.");
+                System.out.println("\nCuanto dinero desea depositar al banco?, Tiene en caja: Lps. " + String.format("%.2f", caja) 
+                        + "\nTenga en cuenta la cantidad maxima que puede depositar es el 60% en efectivo en caja.");
                 valid = false;
                 
                 while (!valid){
