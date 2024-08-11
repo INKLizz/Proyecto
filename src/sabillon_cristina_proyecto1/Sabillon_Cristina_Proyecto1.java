@@ -19,7 +19,7 @@ public class Sabillon_Cristina_Proyecto1 {
         scan.useDelimiter("\n");
         
         //INVENTARIO
-        int azucar = 10, avena = 10, trigo = 10, maiz = 10, cantidad_azucar = 0, cantidad_avena = 0, cantidad_trigo = 0, cantidad_maiz = 0;
+        int azucar = 0, avena = 0, trigo = 0, maiz = 0, cantidad_azucar = 0, cantidad_avena = 0, cantidad_trigo = 0, cantidad_maiz = 0;
         
         //VENTA
         int  azucar_venta = 30, avena_venta = 25, trigo_venta = 32, maiz_venta = 20, cantidad = 0;
