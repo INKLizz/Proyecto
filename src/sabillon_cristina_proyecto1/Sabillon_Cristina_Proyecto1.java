@@ -307,7 +307,7 @@ public class Sabillon_Cristina_Proyecto1 {
                     //CANTIDAD A VENDER
                     System.out.println("Cuantos kgs va a comprar?");
                     valid = false;
-
+                    
                     while (!valid) {
                         try {
                             cantidad = scan.nextInt();
@@ -518,6 +518,7 @@ public class Sabillon_Cristina_Proyecto1 {
                     
                     //REPORTES
                     total_ventas += total;
+                    
                     if (cantidad_1 > 0 || cantidad_2 > 0 || cantidad_3 > 0 || cantidad_4 > 0){
                     contador_ventas++;
                     }
