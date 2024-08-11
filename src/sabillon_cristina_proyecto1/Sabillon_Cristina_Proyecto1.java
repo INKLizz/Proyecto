@@ -338,7 +338,6 @@ public class Sabillon_Cristina_Proyecto1 {
                         }
                         else if (continuar.equalsIgnoreCase("no")){
                             cantidad = 0;
-                            continue;
                         }                        
                     }
                     else if (codigo.equals("1") && cantidad <= azucar){
@@ -362,7 +361,6 @@ public class Sabillon_Cristina_Proyecto1 {
                         }
                         else if (continuar.equalsIgnoreCase("no")){
                             cantidad = 0;
-                            continue;
                         }                        
                     }
                     else if (codigo.equals("2") && cantidad <= avena){
@@ -386,7 +384,6 @@ public class Sabillon_Cristina_Proyecto1 {
                         }
                         else if (continuar.equalsIgnoreCase("no")){
                             cantidad = 0;
-                            continue;
                         }                        
                     }  
                     else if (codigo.equals("3") && cantidad <= trigo){
@@ -410,7 +407,6 @@ public class Sabillon_Cristina_Proyecto1 {
                         }
                         else if (continuar.equalsIgnoreCase("no")){
                             cantidad = 0;
-                            continue;
                         }
                     }
                     else if (codigo.equals("4") && cantidad <= maiz){
