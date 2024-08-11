@@ -448,7 +448,7 @@ public class Sabillon_Cristina_Proyecto1 {
                     if ((azucar == 0 && avena == 0 && trigo == 0 && maiz == 0 && cliente.equalsIgnoreCase("a")) ||
                         (azucar == 0 && avena == 0 && trigo == 0 && cliente.equalsIgnoreCase("b")) ||
                         (maiz == 0 && cliente.equalsIgnoreCase("c"))) {
-                        System.out.println("No hay mas productos.");
+                        System.out.println("\nNo hay mas productos para vender.");
                         producto_disponible = false;
                     }                        
                     
@@ -458,7 +458,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         buy = scan.next();
 
                         while (!buy.equalsIgnoreCase("si") && !buy.equalsIgnoreCase("no")) {
-                            System.out.println("ERROR. INGRESO INVALIDO. Tiene que escribir si o no.");
+                            System.out.println("INGRESO INVALIDO. Tiene que escribir si o no.");
                             buy = scan.next();
                         }
 
@@ -516,7 +516,7 @@ public class Sabillon_Cristina_Proyecto1 {
                     System.out.println("Descuento " + descuento * 100 + " % : Lps. " + String.format("%.2f",descuento_final));
                     System.out.println("Total Final: " + String.format("%.2f",total)); 
                     }else{
-                        System.out.println("No se realizo ninguna venta.");
+                        System.out.println("\nNo se realizo ninguna venta.");
                     }
                     
                     //REPORTES
@@ -822,7 +822,7 @@ public class Sabillon_Cristina_Proyecto1 {
                     
                     //NO SE IMPRIME FACTURA
                     if (cantidad == 0){
-                        System.out.println("Cantidad es 0, no se realizo ninguna compra.");
+                        System.out.println("\nCantidad es 0, no se realizo ninguna compra.");
                         continue;
                     }
                     
@@ -831,7 +831,7 @@ public class Sabillon_Cristina_Proyecto1 {
 
                     //NO SE PUEDE PAGAR COMPRA
                     if (total > caja){
-                        System.out.println("No se puede realizar compra.");
+                        System.out.println("\nNo se puede realizar compra.");
                         System.out.println("Solo tiene en caja Lps. " + String.format("%.2f", caja));
                         System.out.println("Se requiere Lps. " + String.format("%.2f", total));
                         continue;
@@ -855,7 +855,7 @@ public class Sabillon_Cristina_Proyecto1 {
                     caja -= total;
 
                     //FACTURA
-                    System.out.println("   **** FACTURA ****");
+                    System.out.println("\n   **** FACTURA ****");
                     System.out.println("Tipo de Proveedor: " + proveedor.toUpperCase());
                     System.out.println("Codigo de Producto: " + codigo);
                     System.out.println("Producto: " + producto);
@@ -973,10 +973,10 @@ public class Sabillon_Cristina_Proyecto1 {
                 }
                 caja -= deposito;
                 if (deposito > 0){
-                    System.out.println("Deposito realizado. Nuevo saldo en caja: Lps. " + String.format("%.2f", caja));
+                    System.out.println("\nDeposito realizado. Nuevo efectivo en caja: Lps. " + String.format("%.2f", caja));
                     System.out.println("...Cerrando caja.");
                 }else{
-                    System.out.println("No se realizo ningun deposito.");
+                    System.out.println("\nNo se realizo ningun deposito.");
                     System.out.println("...Cerrando caja.");
                 }
             }
