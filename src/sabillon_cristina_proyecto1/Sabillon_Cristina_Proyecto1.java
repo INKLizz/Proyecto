@@ -794,7 +794,6 @@ public class Sabillon_Cristina_Proyecto1 {
                         }
                     }
 
-
                     // TIPO DE PRODUCTO A COMPRAR
                     if (codigo.equals("1")){
                         producto = "Azucar";
@@ -999,7 +998,7 @@ public class Sabillon_Cristina_Proyecto1 {
         // ** SALIR DEL SISTEMA **
         if (ventana.equalsIgnoreCase("f")){
             System.out.println("\nSaliendo del Sistema.....");
-            System.exit(0);
+            break;
             }
         }    
     }
