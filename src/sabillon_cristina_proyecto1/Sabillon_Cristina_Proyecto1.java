@@ -674,7 +674,6 @@ public class Sabillon_Cristina_Proyecto1 {
                         producto_4 += (producto_4.equals("") ? "" : ", ") + "Trigo";
                     }
 
-                    
                     //RESETEAR VARIABLES
                     Factura = "";                    
                     subtotal_final = 0;
@@ -746,7 +745,6 @@ public class Sabillon_Cristina_Proyecto1 {
             }
             //INPUT
             System.out.println("Favor ingrear el numero del codigo del producto que desea comprar.");
-            System.out.println("Escribir 'e' para volver al menu principal.");
             codigo = scan.next();                  
                     
                     //RESTRICCIÓN
@@ -755,7 +753,7 @@ public class Sabillon_Cristina_Proyecto1 {
                             
                             //RESTRICCIÓN A
                             if (codigo.equals("1") || codigo.equals("2") || codigo.equals("3") 
-                                || codigo.equals("4") || codigo.equalsIgnoreCase("e")) {
+                                || codigo.equals("4")) {
                                 if (codigo.equals("2") || codigo.equals("3")) {
                                     System.out.println("Este producto no lo vende el proveedor A. Intente de nuevo.");
                                 } else {
@@ -769,7 +767,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         //RESTRICCIÓN B
                         else if (proveedor.equalsIgnoreCase("b")){
                             if (codigo.equals("1") || codigo.equals("2") || codigo.equals("3") 
-                                || codigo.equals("4") || codigo.equalsIgnoreCase("e")) {
+                                || codigo.equals("4")) {
                                 if (codigo.equals("1") || codigo.equals("4")) {
                                     System.out.println("Este producto no lo vende el proveedor B. Intente de nuevo.");
                                 } else {
@@ -783,7 +781,7 @@ public class Sabillon_Cristina_Proyecto1 {
                         //RESTRICCIÓN C
                         else if (proveedor.equalsIgnoreCase("c")){
                             if (codigo.equals("1") || codigo.equals("2") || codigo.equals("3") 
-                                || codigo.equals("4") || codigo.equalsIgnoreCase("e")) {
+                                || codigo.equals("4")) {
                                 if (codigo.equals("1") || codigo.equals("3") || codigo.equals("4")) {
                                     System.out.println("Este producto no lo vende el proveedor C. Intente de nuevo.");
                                 } else {
@@ -795,11 +793,7 @@ public class Sabillon_Cristina_Proyecto1 {
                             codigo = scan.next();                            
                         }
                     }
-                    
-                    //SALIDA
-                    if (codigo.equalsIgnoreCase("e")) {
-                        continue;
-                        }                        
+
 
                     // TIPO DE PRODUCTO A COMPRAR
                     if (codigo.equals("1")){
