@@ -182,7 +182,7 @@ public class Sabillon_Cristina_Proyecto1 {
             
             //CLIENTE NO TIENE PRODUCTOS        
             if (cliente.equals("c") && maiz == 0){
-                System.out.println("No hay producto para vender al cliente tipo C.");
+                System.out.println("No hay producto para vender al cliente tipo C");
                 continue;
             }    
             if (cliente.equals("b")&& avena == 0 && trigo == 0 && azucar == 0){
@@ -317,7 +317,7 @@ public class Sabillon_Cristina_Proyecto1 {
                                 valid = true;
                             }
                         } catch (InputMismatchException e) {
-                            System.out.println("Debe ingresar un numero. Intente de nuevo.");
+                            System.out.println("Debe ingresar un numero entero. Intente de nuevo.");
                             scan.next();
                         }
                     }
@@ -813,7 +813,7 @@ public class Sabillon_Cristina_Proyecto1 {
                                 valid = true;
                             }
                         } catch (InputMismatchException e) {
-                            System.out.println("Debe ingresar un numero. Intente de nuevo.");
+                            System.out.println("Debe ingresar un numero entero. Intente de nuevo.");
                             scan.next();
                         }
                     }  
@@ -930,7 +930,7 @@ public class Sabillon_Cristina_Proyecto1 {
             if (si_no.equalsIgnoreCase("si")){ 
                 caja_abierta = false;
                 
-                //CONTADORES Y ACUMULADORES REPORTE ERSETEO
+                //CONTADORES Y ACUMULADORES REPORTE RESETEO
                 contador_ventas = 0;  
                 contador_compras = 0; 
                 total_ventas = 0; 
